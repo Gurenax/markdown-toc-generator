@@ -23,7 +23,7 @@ if(!file || !file.endsWith('.md')) {
         
       // console.log(line.toLowerCase())
       const title = line.replace(matchHeading, '')
-      const anchorLink = line.replace(matchHeading, '(# ').toLowerCase().replace(matchSpaces, '-')+')'
+      const anchorLink = '(#' + title.toLowerCase().replace(matchSpaces, '-')+')'
       console.log('* **['+title+']'+anchorLink+'**')
     }
   })
