@@ -1,16 +1,25 @@
 const fs = require('fs')
 
-const fileArgument = process.argv.filter(arguments => arguments.startsWith('--file=') && arguments.endsWith('.md') && arguments.length > 10)[0]
+// Capture markdown file
+const matchMarkdownFile = /[0-9A-Za-z]+.md/ig
+const fileArgument = process.argv.filter(arguments => arguments.startsWith('--file=') && arguments.match(matchMarkdownFile) && arguments.length > 10)[0]
 const file = !!fileArgument && fileArgument.replace('--file=','')
 
+// Capture heading level
+const headingLevelArgument = process.argv.filter(arguments => arguments.startsWith('--headingLevel=') && arguments.length > 15)[0]
+const intHeadingLevel = parseInt(headingLevelArgument.replace('--headingLevel=',''))
+
+// Heading level is by default 6 if not specified correctly
+const headingLevel = (!!headingLevelArgument && intHeadingLevel>0 && intHeadingLevel<7 && intHeadingLevel) || 6
+
 if(!file || !file.endsWith('.md')) {
-  throw new Error('Markdown file is required.');
+  console.error('Markdown file is required.')
 } else {
   try {
     const contents = fs.readFileSync(file,'utf8')
     //console.log (contents)
 
-    const matchHeading = /^#{1,6}\s/
+    const matchHeading = new RegExp(`^#{1,${headingLevel}}\\s`)
     const matchSpaces = /\s+/g
 
     console.log('## Table of Contents')
@@ -31,6 +40,6 @@ if(!file || !file.endsWith('.md')) {
     })
   }
   catch(error) {
-    console.error('Error reading file')
+    console.error('Error reading file.')
   }
 }
