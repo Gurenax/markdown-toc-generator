@@ -13,4 +13,8 @@ Ever get tired of manually typing table of contents and putting anchor links for
 - Heading level
 - Title for Table of Contents
 
-## Example
+## Examples
+```
+node app.js --file=Example.md
+node app.js --file=Example.md --headingLevel=6
+```
