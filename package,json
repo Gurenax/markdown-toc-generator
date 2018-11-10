@@ -1,0 +1,11 @@
+{
+  "name": "markdown-toc-generator",
+  "version": "1.0.0",
+  "description": "A simple markdown table of contents generator",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Gurenax/markdown-toc-generator"
+  },
+  "author": "Glenn Dimaliwat (https://glenndimaliwat.com)"
+}
