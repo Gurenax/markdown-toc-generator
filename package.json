@@ -11,5 +11,11 @@
   "license": "MIT",
   "bin": {
     "markdown-toc-generator": "bin/start.js"
+  },
+  "dependencies": {
+    "jest": "^23.6.0"
+  },
+  "scripts": {
+    "test" : "jest"
   }
 }
