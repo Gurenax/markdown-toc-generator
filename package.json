@@ -1,6 +1,6 @@
 {
   "name": "markdown-toc-generator",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A simple markdown table of contents generator",
   "main": "app.js",
   "repository": {
