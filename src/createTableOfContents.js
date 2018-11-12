@@ -1,3 +1,5 @@
+const fs = require('fs')
+
 /**
  * @description Create the table of contents for the given file and heading level
  * @param {*} file - File path
@@ -38,7 +40,7 @@ const createTableOfContents = (file, headingLevel = 6) => {
         }
       })
     } catch (error) {
-      throw new Error("Error reading file.")
+      throw new Error("Error reading file. "+error)
     }
 
     return output
