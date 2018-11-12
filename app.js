@@ -1,4 +1,3 @@
-const fs = require('fs')
 const { getFileFromArgs } = require('./src/getFileFromArgs')
 const { getHeadingLevelFromArgs } = require('./src/getHeadingLevelFromArgs')
 const { createTableOfContents } = require('./src/createTableOfContents')
