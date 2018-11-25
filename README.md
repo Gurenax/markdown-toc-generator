@@ -8,13 +8,21 @@ Ever get tired of manually typing table of contents and putting anchor links one
 * **[Example](#example)**
 
 ## Install
+```
+yarn global add markdown-toc-generator
+```
+or
+```
+npm install -g markdown-toc-generator
+```
 
 ## Parameters
 - File name (`--file=`)
 - Heading level (`--headingLevel=`)
 
 ## Examples
+While at your markdown file's directory, run the following commands:
 ```
-node app.js --file=Example.md
-node app.js --file=Example.md --headingLevel=6
+markdown-toc-generator --file=Example.md
+markdown-toc-generator --file=Example.md --headingLevel=6
 ```
