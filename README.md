@@ -5,7 +5,7 @@ Ever get tired of manually typing table of contents and putting anchor links one
 * **[Markdown Table of Contents Generator](#markdown-table-of-contents-generator)**
 * **[Install](#install)**
 * **[Parameters](#parameters)**
-* **[Example](#example)**
+* **[Examples](#examples)**
 
 ## Install
 ```
