@@ -1,6 +1,6 @@
 /**
  * @description Get the filename from the --file runtime argument
- * @param {*} args - Array arguments
+ * @param {array} args - Array arguments
  */
 const getFileFromArgs = args => {
   // Match letters and numbers that end with .md and ignore case

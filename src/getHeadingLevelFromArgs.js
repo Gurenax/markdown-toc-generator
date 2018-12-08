@@ -1,6 +1,6 @@
 /**
  * @description Get the headingLevel from the --headingLevel runtime argument
- * @param {*} args - Array arguments
+ * @param {array} args - Array arguments
  */
 const getHeadingLevelFromArgs = args => {
   // Filter the heading level from the arguments

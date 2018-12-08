@@ -1,7 +1,7 @@
 /**
  * @description Create the table of contents for the given file and heading level
- * @param {*} file - File path
- * @param {*} headingLevel - Maximum heading level (default: 6)
+ * @param {string} file - File path
+ * @param {integer} headingLevel - Maximum heading level (default: 6)
  */
 const createTableOfContents = (contents, headingLevel = 6) => {
   // Initialise output
