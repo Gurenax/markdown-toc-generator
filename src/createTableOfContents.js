@@ -5,33 +5,33 @@
  */
 const createTableOfContents = (contents, headingLevel = 6) => {
   // Initialise output
-  let output = ""
+  let output = '';
 
   // Match given heading level
-  const matchHeading = new RegExp(`^#{1,${headingLevel}}\\s`)
+  const matchHeading = new RegExp(`^#{1,${headingLevel}}\\s`);
   // Match spaces
-  const matchSpaces = /\s+/g
+  const matchSpaces = /\s+/g;
 
   // Output title of table of contents
-  output += "## Table of Contents\n"
+  output += '## Table of Contents\n';
 
   // For every new line in the file
-  contents.split("\n").map(line => {
+  contents.split('\n').map(line => {
     // Find a heading based on given maximum heading level
-    if (line.match(matchHeading) && !line.startsWith("## Table of Contents")) {
+    if (line.match(matchHeading) && !line.startsWith('## Table of Contents')) {
       // Extract title from the heading
-      const title = line.replace(matchHeading, "")
+      const title = line.replace(matchHeading, '');
       // Build anchor link string
       const anchorLink =
-        "(#" + title.toLowerCase().replace(matchSpaces, "-") + ")"
+        '(#' + title.toLowerCase().replace(matchSpaces, '-') + ')';
       // Output the table of contents entry
-      output += `* **[${title}]${anchorLink}**\n`
+      output += `* **[${title}]${anchorLink}**\n`;
     }
-  })
+  });
 
-  return output
-}
+  return output;
+};
 
 module.exports = {
   createTableOfContents
-}
+};

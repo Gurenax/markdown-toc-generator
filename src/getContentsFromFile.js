@@ -1,4 +1,4 @@
-const fs = require('fs')
+const fs = require('fs');
 
 /**
  * @description Read file and get the contents
@@ -6,13 +6,12 @@ const fs = require('fs')
  */
 const getContentsFromFile = file => {
   try {
-    return fs.readFileSync(file, "utf8")
+    return fs.readFileSync(file, 'utf8');
+  } catch (error) {
+    throw new Error('Error reading file. ' + error);
   }
-  catch(error) {
-    throw new Error("Error reading file. "+error)
-  }
-}
+};
 
 module.exports = {
   getContentsFromFile
-}
+};
