@@ -30,4 +30,4 @@ markdown-toc-generator --file=Example.md --headingLevel=6
 ## Contributing
 Raising an issue or creating pull requests would be a good way to contribute.
 
-Thanks to those who already have!
+Thanks to those who already contributed!
