@@ -1,6 +1,6 @@
 {
   "name": "markdown-toc-generator",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A simple markdown table of contents generator",
   "main": "app.js",
   "repository": {
@@ -12,10 +12,11 @@
   "bin": {
     "markdown-toc-generator": "bin/start.js"
   },
-  "dependencies": {
-    "jest": "^23.6.0"
-  },
+  "dependencies": {},
   "scripts": {
     "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^23.6.0"
   }
 }
